@@ -1,0 +1,67 @@
+Tomato Leaf Disease Classification
+
+Overview
+
+Tomato Leaf Disease Classification is a machine learning project that aims to
+classify tomato leaves into different disease categories using machine learning techniques.
+This project helps identify and diagnose tomato plant diseases early, allowing for timely intervention
+and improved crop yield.
+
+Data Source
+
+The dataset used for this project was obtained from Kaggle
+https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset
+and contains a collection of tomato leaf images, each labeled with the corresponding
+disease category. The dataset is divided into multiple classes,
+each representing a different tomato leaf disease. It was collected to create a
+robust machine learning model for disease classification.
+
+Model Training
+
+The machine learning model for disease classification was trained using Google Colab,
+a cloud-based Jupyter notebook environment. The training process involved data preprocessing,
+model architecture design, hyperparameter tuning, and training on the provided dataset.
+
+
+TensorFlow Model Serving with Docker
+
+To deploy the trained model and make predictions accessible via an API,
+we use TensorFlow Model Serving with Docker. This allows us to serve
+the machine learning model in a scalable and efficient manner.
+The Docker container can be deployed on cloud platforms or on-premises servers for real-time inference.
+
+Project Structure
+
+- api/: Contains the FastAPI-based backend for serving the machine learning model and
+          requirements.txt (lists the Python packages required to run the project).
+- saved_models/: Stores the pretrained machine learning models.
+- frontend/: the frontend of the project.
+- models.config/: the file for tensorflow-serving.
+- training/: stores the data used in training and notebook with data preprocessing and model code.
+
+Getting Started
+
+1. Clone this repository to your local machine.
+2. Create a Python virtual environment and install the required packages using `pip install -r requirements.txt`.
+3. Change app's middleware at main file to the specific origin(s) of your frontend
+4. Create Docker Container for tensorflow serving and run the following lines:
+
+   docker pull tensorflow/serving
+
+   docker run -t --rm -p 8501:8501 -v
+   [PATH TO YOUR PROJECT DIRECTORY]:/[DIRECTORY IN DOCKER TO WHICH YOU WANT TO MAP YOUR PROJECT]
+   tensorflow-serving --rest_api_port=8501 --model_config_file=[PATH TO models.config]
+
+   if you want to change rest_api_port, don't forget to change it to the new value in endpoint link
+   in main.py
+
+5. Run main.
+6. Open index.html.
+
+That's it! You can download the photos of the leaves
+
+Usage
+
+-- You can drag and drop or browse for a tomato leaf image for classification.
+-- Click the "Predict" button to classify the uploaded image and view the result.
+

@@ -1,0 +1,76 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("tomato_pattern_blutted.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 1; /* Adjust the opacity value (0 to 1) */
+        }
+
+
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            margin-top: 200px;
+            font-size: 36px;
+        }
+
+        #drop-zone {
+            border: 2px dashed #ccc;
+            padding: 60px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #ffffff;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 350px;
+        }
+
+        #drop-zone p {
+            margin: 0;
+        }
+
+        #drop-zone:hover {
+            border-color: #007BFF;
+        }
+
+        #result-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #image-container {
+            text-align: center;
+            display: none;
+        }
+        #uploaded-image {
+            max-width: 100%; /* Ensure the image fits within its container */
+            height: auto;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* Add more CSS styles for further customization */
+
+        /* Example: Style the button */
+        #drop-zone button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Example: Style the button on hover */
+        #drop-zone button:hover {
+            background-color: #0056b3;
+        }
